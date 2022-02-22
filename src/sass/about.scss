@@ -1,0 +1,26 @@
+.about-head {
+    #start {
+        background-image: url(../images/banner-about.jpg);
+    }
+}
+
+.about-main {
+    .card{
+        
+       
+        .line3{
+            width: 10%;
+            border-top: 1px solid $main-color;
+        }
+        .card-text{
+            color: $card-text-color;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 14px 0;
+        }
+        .about-social{
+            margin-left: 18%;
+            margin-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@import "./variables";
+
+
+.banner{
+    #start{
+        background-image: url(../images/projects-banner.jpg);
+        height: 250px;
+        background-position: 50% 10%;
+        background-repeat: no-repeat;
+    }
+    .overlay{
+        background-color: rgba(65 , 155, 155, 0.5);
+        height: 100%;
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .title1{
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.company-projects{
+    .custom-btn-2{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        color: #363636;
+        border: none;
+        border-radius: 1px;
+        font-weight: bold;
+        &:hover,
+        &:focus{
+            color: white;
+            background-color: $main-color;
+            border: none;
+        }
+    }
+}
+
+
+.btn,button{
+    &:focus,
+    &:active{
+        outline: none !important;
+        box-shadow: none !important;  
+    }
+}
+  
+#image-gallery {
+    .modal-footer{
+    display: block;
+    }
+} 
+.thumb{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.project-photos{
+    .card {
+        .card-body{
+            .card-title {
+                font-weight: 800;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width:576px){
+    .project-photos{
+        .thumb{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+    
+}

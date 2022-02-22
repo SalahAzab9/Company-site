@@ -1,0 +1,27 @@
+.contact-banner{
+    #start{
+        background-image: url(../images/banner-contact.jpg);
+    }
+}
+
+.contact-main{
+    #contact-info {
+        svg {
+            //  هنا لو فتحنا المتصفح حنلاقي الايقونة متسمية كدة مش ايي وده بسبب ان احنا استدعنا مكتبة فونت اوسيم من خلال ملف الجافاسكريبت بتاعها وهو بيحول الأي للأسم ده لكن لو استدعينا مكتبة فونت اوسيم من خلال ملف السي اس اس بتاعها حنكتب أي عادي
+            // والتحويل ده بيحصل لما الملف يجي يترجم او يحصله بندل
+            color: $main-color !important;
+            margin-left: 5px !important;
+        }
+    }
+    form {
+        input[type = email] {
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width : 767px) {
+    .contact-header {
+        margin-top: 50px;
+    }
+}

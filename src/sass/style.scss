@@ -1,0 +1,332 @@
+@import "./projects.scss";
+@import "./variables";
+@import "./blog.scss";
+@import "./about.scss";
+@import "./contact.scss";
+
+@font-face {
+    font-family: "cairo";
+    src: url(../fonts/Cairo-Regular.ttf);
+}
+body {
+    font-family: "cairo",sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+.container-fluid {
+    padding: 0;
+    overflow-x: hidden;
+}
+.top-menu {
+    .navbar {
+        font-weight: bold;
+        padding: 0 100px !important;
+        background-color: #fff !important;
+        .navbar-nav {
+            li > a {
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                &:hover{
+                    color: $main-color !important;
+                    border-bottom: 1px solid $main-color;
+                    background-color: $custom-color;
+                }
+            }
+            .active{
+                 a{
+                color: $main-color !important;
+                border-bottom: 1px solid $main-color !important;
+                }
+            } 
+        }
+    }
+}
+.carousel-top{
+    .row{
+        display: block !important;
+    }
+    .carousel{
+        .carousel-item {
+            .overlay{
+                background-color:rgba(65, 155,155, 0.5) ;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                display: flex !important;
+                flex-flow: column ;
+                align-items: center ;
+                // بتوسطن العناصر بالعرض
+                justify-content: center ;
+                // بتوسطن العناصر بالطول
+                z-index: 1;
+            }
+
+            img{
+                height: 450px;
+            }
+        }
+        .carousel-indicators {
+            li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 20px 5px 0px 0px;
+                &.active {
+                    background-color: $main-color;
+                }
+            }
+        }
+        .carousel-caption {
+            h1 {
+                margin-bottom: 50px;
+                font-weight: bold;
+                color: white;
+            }
+            h4 {
+                width: 60%;
+                color: $custom-color !important;
+            }
+        }
+    }
+}
+// خلينا الزرار برا تنسيقات الكاروسل علشان يكون الصنف ده تنسيقاته عامة اقدر استخدمها بعد كدة
+.custom-btn{
+    color: $main-color !important;
+    border: 1px solid $main-color !important;
+    padding: 10px 20px;
+    &:hover,
+    &:focus {
+        color: $custom-color !important;
+        background-color: $main-color !important;
+        border-color: $custom-color !important;
+
+    }
+}
+.who-are-we {
+    .custom-paragraph {
+        line-height: 2em;
+    }
+    
+}
+
+.company-name {
+    color: $main-color;
+}
+
+.custom-btn-main {
+    padding: 20px;
+    color: white;
+    background-color: $main-color !important;
+    font-weight: bold;
+    width: 250px;
+    &:hover {
+        color: #000;
+    }
+}
+
+.latest-company-projects {
+    background-color: #ffffcc;
+    #latest-company-projects{
+        width: 80%;
+        .thumbnail1{
+            position: relative;
+            margin-top: 20px;
+            margin-top: 20px;
+            .caption1{
+                position: absolute;
+                top: 0;
+                right: 0;
+                max-width: 100% !important;
+                height: 100%;
+                background-color: rgba(65, 155,155, 0.5);
+                padding: 2%;
+                color: #fff !important;
+                text-align: center;
+                display: none;
+            }
+            .project-category{
+                position: absolute;
+                top: 5%;
+                right: 0;
+                padding: 10px;
+                border-bottom-left-radius: 10px;
+                border-top-left-radius: 10px;
+                background-color: rgba(240, 240, 240, 0.75);
+                box-shadow: 0px 5px 20px 0px #202020 !important;
+                font-weight: bold;
+            }
+        }
+        a.carousel-control-prev{
+            color: #252222;
+            position: absolute;
+            right: -6%;
+            width: 0;
+        }
+        a.carousel-control-next {
+            color: #252222;
+            position: absolute;
+            left: -5%;
+            width: 0;
+        }
+    }
+    
+}
+.said-about-company{
+    .custom-image {
+        margin: 20px;
+        border-radius: 10px;
+    }
+    .custom-paragraph {
+        line-height: 2em ;
+    }
+    .fa-angle-right,
+    .fa-angle-left{
+        color: #252222;
+    }
+    a.carousel-control-next{
+        position: absolute;
+        left: 7%;
+        width: 0;
+    }
+    a.carousel-control-prev{
+        position: absolute;
+        right: 7%;
+        width: 0;
+    }
+}
+.project-details {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+.clients{
+    background-color: #419b9b;
+}
+
+.latest-blogs {
+    .card-body{
+        background-color: #fff;
+        width: 90%;
+        position: relative;
+        top: -17px;
+        left: -5%;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+    }
+    .card-title {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .card-text {
+        font-size: 14px;
+    }
+}
+
+footer {
+    height: 450px;
+    background-color: #393939;
+    h2{
+        font-size: 150%;
+        color: $custom-color;
+    }
+    .line1 {
+        width: 5%;
+        border-top: 3px solid $custom-color;
+    }
+    #lists{
+        a{
+            text-decoration: none;
+            margin-left: 15px;
+            color: #bbbbbb;
+            font-size: 90%;
+            &:hover,
+            &:focus{
+                color: $custom-color;
+            }
+        }
+    }
+
+    .line2{
+        border-top: 3px solid $custom-color;
+        width: 60%;
+    }
+    .form{
+        margin-right: 45px;
+        margin-left: 45px;
+        input {
+            color: $custom-color;
+            background-color: #202020;
+            border-radius: 1px;
+            border: 0;
+            box-shadow: 0 0 2px 0 $custom-color !important;
+            &:focus {
+                border-color: $custom-color;
+                box-shadow: 0 0 2px 0 $custom-color !important;
+                background-color: #202020;
+            }
+        }
+    }
+    .btn-light {
+        &:hover,
+        &:focus{
+            color: $custom-color !important;
+            background-color: #363636 !important;
+            border: 1px solid $custom-color;
+            transition-property: color,border,background-color;
+            transition-duration: 0.3s;
+        }
+    }
+    .copyright {
+        color: #969696;
+        font-weight: bold;
+        font-size: 90%;
+    }
+    .copyright-link {
+        text-decoration: none !important;
+        cursor: pointer;
+        
+        &:hover ,
+        &:focus {
+            color: $custom-color !important;
+        }
+    }
+
+}
+@media (max-width : 991px) {
+    .top-menu{
+        .navbar{
+            padding: 0 20px !important;
+
+            .navbar-nav{
+                li > a {
+                    border-bottom: none !important;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+    .clients{
+        img{
+            height: 140px;
+        }
+    }
+}
+
+@media (max-width: 767px ) {
+    .carousel-top{
+        .carousel{
+            .carousel-caption {
+                h1 {
+                    font-size: 30px;
+                }
+                h4 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+}

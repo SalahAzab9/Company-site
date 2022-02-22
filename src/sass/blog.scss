@@ -1,0 +1,106 @@
+// لم نقم باستدعاء المف اللي مخزنين فيه المتغيرات عشان لما ويب باك بيجي يقرا الملفات اللي اتعملها استدعاء لما يجي يقرا ويعالج ملف الستايل الاساسي قبل مايعدي علي الاستدعاء بتاع الملف ده حيعدي علي الاتدعاء بتاع ملف المتغيرات بالتالي كدة المتغيرات دي موجودة في الملف النهائي كدة عادي مش لازم نستدعي الملف هنا هو كدة كدة ويب باك حيفهم المتغيرات اللي احنا مستدعينها هنا
+
+.banner2{
+    #start{
+        background-image: url(../images/banner-blog-title.jpg);
+    }
+}
+
+.page3 {
+    .box{
+        border: 1px solid $custom-color;
+        box-shadow: 0 1px 1px 1px $custom-color;
+        padding: 15px;
+        margin-top: 5px;
+    }
+
+    .card-text {
+        white-space: nowrap; 
+        // علشان تخلي الكلام يكتفي بس بسطر واحد وماينزلش
+        overflow: hidden;
+        // عشان الزيادة من الكلام مايعديش الكارد اللي هو فيه
+        text-overflow: ellipsis;
+        // عشان تخلي الكلام الزيادة من النص يتحط مكانه ثلاث نقاط
+        color: $card-text-color ;
+    }
+}
+
+.form-control{
+    &:focus{
+        box-shadow: none !important;
+        border-color: $main-color !important;
+    }
+}
+
+.blog-details-main{
+    .card{
+        .card-title{
+            color: $main-color;
+            font-weight: 800;
+        }
+        .card-text{
+            color: $card-text-color;
+        }
+        .post-share {
+            color: $main-color;
+        }
+        
+    }
+}
+.one-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $card-text-color;
+    color: $card-text-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px ;
+    margin-left: 10px;
+    float: left;
+}
+.facebook-social {
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #3b5998;
+    }
+}
+
+.twitter-social {
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #1da1f2;
+    }
+}
+
+.linkedin-social {
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: #0077b0;
+    }
+}
+
+.add-blog-main {
+    label {
+        &:first-child{
+            // يقصد بيها الابن الاول لأي ديف لو كان لابل اعمل عليه التنسيقات ديه واي لبول تاني متعملش عليه
+        font-size: 14px;
+        font-weight: bold;
+        }
+    }
+}
+@media (max-width :576px ){
+    .page3{
+        .card{
+            .card-body{
+              a{
+               position: relative !important;
+               right: 30%;
+                }  
+            } 
+        }
+    }
+}
